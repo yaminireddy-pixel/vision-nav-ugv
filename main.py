@@ -9,7 +9,7 @@ def main():
     print("=== VISION-NAV Autonomous Navigation ===")
 
     object_name = "person"
-    distance = 0.5
+    distance = 2.0
 
     risk_level = calculate_risk(distance, object_name)
     action = choose_action(risk_level)
