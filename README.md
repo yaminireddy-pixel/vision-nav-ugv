@@ -1,41 +1,32 @@
-
-# VISION-NAV
-
-## Vision Based Autonomous Navigation for Unmanned Ground Vehicle for Outdoor Environment
-
-**Smart India Hackathon 2026**
-
-- **Problem ID:** SIH26126
-- **Team ID:** SNTI017
-- **Team Name:** VISION-NAV
-- **Theme:** Robotics and Drones
+# VISION-NAV: Vision-Based Autonomous Navigation for UGV
 
 ## Project Overview
+VISION-NAV is a prototype for vision-based autonomous navigation of an Unmanned Ground Vehicle (UGV) in outdoor environments. It combines object detection, risk mapping, path-planning decisions, vehicle-control commands, and vehicle simulation.
 
-VISION-NAV aims to develop an autonomous navigation system for an unmanned ground vehicle (UGV) operating in outdoor environments.
+## Features
+- Object detection using YOLO and OpenCV.
+- Live camera detection.
+- Risk classification based on obstacle distance.
+- Navigation decisions: STOP, SLOW DOWN, and CONTINUE.
+- Simulated vehicle control and movement.
 
-The system will detect obstacles, assess terrain traversability, estimate the vehicle's position, and plan safer paths.
+## Project Structure
+- `perception/` — Object detection and live camera processing.
+- `risk_mapping/` — Obstacle risk classification.
+- `planning/` — Navigation action selection.
+- `localization/` — Basic position updates.
+- `control/` — Simulated vehicle-control commands.
+- `simulation/` — Vehicle movement simulation.
+- `main.py` — Main program.
 
-## Main Modules
+## Current Status
+The prototype runs locally and has been tested with manually supplied distances for HIGH, MEDIUM, and LOW risk scenarios.
 
-1. AI Perception
-2. Localization
-3. Risk Mapping
-4. Path Planning
-5. Safety and Motion Control
-6. Simulation and Testing
+## Future Improvements
+- Estimate obstacle distances using calibrated camera measurements.
+- Integrate perception outputs with risk mapping.
+- Improve localization and path planning.
+- Evaluate performance in outdoor test environments.
 
-## Technologies
-
-- Python
-- OpenCV
-- NumPy
-- PyTorch
-- YOLO11n
-- SegFormer
-- ROS 2
-- Gazebo
-
-## Project Status
-
-Initial repository setup. Implementation and simulation testing are planned.
+## Disclaimer
+This is a prototype for development and simulation. It has not been validated for safe autonomous operation of a real vehicle.
